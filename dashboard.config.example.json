@@ -1,0 +1,27 @@
+{
+  "calendars": [
+    {
+      "name": "Travis",
+      "color": "#4A90D9",
+      "icsUrl": ""
+    },
+    {
+      "name": "Family",
+      "color": "#E85D75",
+      "icsUrl": ""
+    }
+  ],
+  "weather": {
+    "lat": 39.0997,
+    "lon": -94.5786,
+    "units": "imperial"
+  },
+  "aviation": {
+    "airport": "KMCI"
+  },
+  "refreshIntervals": {
+    "calendar": 300000,
+    "weather": 600000,
+    "aviation": 300000
+  }
+}
