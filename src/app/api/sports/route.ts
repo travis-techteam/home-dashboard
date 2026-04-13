@@ -7,6 +7,8 @@ interface GameInfo {
   status: string;
   homeTeam: string;
   awayTeam: string;
+  homeLogo: string;
+  awayLogo: string;
   homeScore: string;
   awayScore: string;
   detail: string;
@@ -86,6 +88,8 @@ export async function GET() {
             status,
             homeTeam: homeTeam.team?.abbreviation || "HOME",
             awayTeam: awayTeam.team?.abbreviation || "AWAY",
+            homeLogo: homeTeam.team?.logo || "",
+            awayLogo: awayTeam.team?.logo || "",
             homeScore: homeTeam.score || "0",
             awayScore: awayTeam.score || "0",
             detail,

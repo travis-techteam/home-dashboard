@@ -29,14 +29,14 @@ export default function Home() {
         <WindsAloft />
       </div>
 
-      {/* Sports */}
-      <SportsScores />
+      {/* Sports + Garbage side by side */}
+      <div className="grid grid-cols-2 gap-4">
+        <SportsScores />
+        <GarbageSchedule />
+      </div>
 
       {/* Calendar */}
       <Calendar />
-
-      {/* Bottom section */}
-      <GarbageSchedule />
     </main>
   );
 }
