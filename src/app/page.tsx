@@ -1,30 +1,17 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import { Clock } from "@/components/Clock";
 import { Weather } from "@/components/Weather";
 import { SunriseSunset } from "@/components/SunriseSunset";
 import { AviationWeather } from "@/components/AviationWeather";
 import { TfrAlerts } from "@/components/TfrAlerts";
 import { WindsAloft } from "@/components/WindsAloft";
-import { WeatherRadar } from "@/components/WeatherRadar";
 import { SportsScores } from "@/components/SportsScores";
 import { GarbageSchedule } from "@/components/GarbageSchedule";
 import { Calendar } from "@/components/Calendar";
 import { QuoteOfDay } from "@/components/QuoteOfDay";
 
 export default function Home() {
-  const [config, setConfig] = useState<{
-    weather: { lat: number; lon: number };
-  } | null>(null);
-
-  useEffect(() => {
-    fetch("/api/config")
-      .then((res) => res.json())
-      .then(setConfig)
-      .catch(() => {});
-  }, []);
-
   return (
     <main className="min-h-screen p-4 flex flex-col gap-4 max-w-[1080px] mx-auto">
       {/* Top section: Clock + Weather side by side */}
@@ -35,15 +22,6 @@ export default function Home() {
 
       {/* Sunrise/Sunset */}
       <SunriseSunset />
-
-      {/* Weather Radar */}
-      {config && (
-        <WeatherRadar
-          lat={config.weather.lat}
-          lon={config.weather.lon}
-          zoom={8}
-        />
-      )}
 
       {/* Aviation section */}
       <AviationWeather />
