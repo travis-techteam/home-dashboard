@@ -48,7 +48,7 @@ export async function GET() {
     }
 
     // Parse altitude levels from header
-    const altLabels = ["3000", "6000", "9000", "12000", "18000", "24000"];
+    const altLabels = ["3000", "6000", "9000", "12000"];
 
     // The station line has the station ID followed by wind groups
     // Each wind group is 4 digits (direction + speed) or 6 digits (with temp)
