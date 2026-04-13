@@ -7,6 +7,17 @@ export interface CalendarSource {
   icsUrl: string;
 }
 
+export interface GarbageSchedule {
+  day: string;
+  frequency: "weekly" | "biweekly";
+  startDate?: string;
+}
+
+export interface SportsTeam {
+  team: string;
+  league: string;
+}
+
 export interface DashboardConfig {
   calendars: CalendarSource[];
   weather: {
@@ -17,6 +28,11 @@ export interface DashboardConfig {
   aviation: {
     airport: string;
   };
+  garbage?: {
+    trash: GarbageSchedule;
+    recycling: GarbageSchedule;
+  };
+  sports?: SportsTeam[];
   refreshIntervals: {
     calendar: number;
     weather: number;

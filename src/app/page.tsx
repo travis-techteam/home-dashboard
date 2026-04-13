@@ -3,9 +3,15 @@
 import { useState, useEffect } from "react";
 import { Clock } from "@/components/Clock";
 import { Weather } from "@/components/Weather";
+import { SunriseSunset } from "@/components/SunriseSunset";
 import { AviationWeather } from "@/components/AviationWeather";
+import { TfrAlerts } from "@/components/TfrAlerts";
+import { WindsAloft } from "@/components/WindsAloft";
 import { WeatherRadar } from "@/components/WeatherRadar";
+import { SportsScores } from "@/components/SportsScores";
+import { GarbageSchedule } from "@/components/GarbageSchedule";
 import { Calendar } from "@/components/Calendar";
+import { QuoteOfDay } from "@/components/QuoteOfDay";
 
 export default function Home() {
   const [config, setConfig] = useState<{
@@ -27,8 +33,8 @@ export default function Home() {
         <Weather />
       </div>
 
-      {/* Aviation Weather */}
-      <AviationWeather />
+      {/* Sunrise/Sunset */}
+      <SunriseSunset />
 
       {/* Weather Radar */}
       {config && (
@@ -39,8 +45,24 @@ export default function Home() {
         />
       )}
 
-      {/* Calendar takes remaining space */}
+      {/* Aviation section */}
+      <AviationWeather />
+      <div className="grid grid-cols-2 gap-4">
+        <TfrAlerts />
+        <WindsAloft />
+      </div>
+
+      {/* Sports */}
+      <SportsScores />
+
+      {/* Calendar */}
       <Calendar />
+
+      {/* Bottom section */}
+      <div className="grid grid-cols-2 gap-4">
+        <GarbageSchedule />
+        <QuoteOfDay />
+      </div>
     </main>
   );
 }

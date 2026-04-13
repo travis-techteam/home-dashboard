@@ -19,6 +19,14 @@
   "aviation": {
     "airport": "KMCI"
   },
+  "garbage": {
+    "trash": { "day": "Monday", "frequency": "weekly" },
+    "recycling": { "day": "Monday", "frequency": "biweekly", "startDate": "2026-01-05" }
+  },
+  "sports": [
+    { "team": "Kansas City Chiefs", "league": "nfl" },
+    { "team": "Kansas City Royals", "league": "mlb" }
+  ],
   "refreshIntervals": {
     "calendar": 300000,
     "weather": 600000,
