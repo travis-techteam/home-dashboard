@@ -75,11 +75,13 @@ export function Weather() {
         humidity
       </div>
       {/* Mini forecast */}
-      <div className="flex gap-3 mt-3 overflow-x-auto">
+      <div className="flex justify-between mt-3">
         {weather.forecast.map((day) => (
-          <div key={day.date} className="text-center text-xs min-w-[3rem]">
+          <div key={day.date} className="text-center text-xs flex-1">
             <div className="text-muted">{day.date}</div>
-            <WeatherIcon code={day.icon} size={32} />
+            <div className="flex justify-center">
+              <WeatherIcon code={day.icon} size={32} />
+            </div>
             <div>
               <span className="text-foreground">{day.high}&deg;</span>{" "}
               <span className="text-muted">{day.low}&deg;</span>
