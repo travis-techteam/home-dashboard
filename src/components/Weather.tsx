@@ -1,18 +1,17 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
-import Image from "next/image";
 import { Card } from "./Card";
 import type { WeatherData } from "@/lib/types";
 
 function WeatherIcon({ code, size = 48 }: { code: string; size?: number }) {
+  /* eslint-disable @next/next/no-img-element */
   return (
-    <Image
+    <img
       src={`https://openweathermap.org/img/wn/${code}@2x.png`}
       alt="weather"
       width={size}
       height={size}
-      unoptimized
     />
   );
 }
