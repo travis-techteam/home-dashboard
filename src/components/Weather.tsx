@@ -5,10 +5,12 @@ import { Card } from "./Card";
 import type { WeatherData } from "@/lib/types";
 
 function WeatherIcon({ code, size = 48 }: { code: string; size?: number }) {
+  // Force day icons — night icons are dark/invisible on dark backgrounds
+  const dayCode = code.replace("n", "d");
   /* eslint-disable @next/next/no-img-element */
   return (
     <img
-      src={`https://openweathermap.org/img/wn/${code}@2x.png`}
+      src={`https://openweathermap.org/img/wn/${dayCode}@2x.png`}
       alt="weather"
       width={size}
       height={size}
