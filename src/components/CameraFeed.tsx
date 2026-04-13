@@ -14,7 +14,7 @@ interface CameraStreamProps {
 function CameraSnapshot({
   name,
   streamName,
-  refreshInterval = 2000,
+  refreshInterval = 5000,
 }: CameraStreamProps) {
   const [imgSrc, setImgSrc] = useState<string>("");
   const [error, setError] = useState(false);
