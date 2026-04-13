@@ -4,6 +4,7 @@ import { Clock } from "@/components/Clock";
 import { Weather } from "@/components/Weather";
 import { SunriseSunset } from "@/components/SunriseSunset";
 import { AviationWeather } from "@/components/AviationWeather";
+import { TafForecast } from "@/components/TafForecast";
 import { TfrAlerts } from "@/components/TfrAlerts";
 import { WindsAloft } from "@/components/WindsAloft";
 import { SportsScores } from "@/components/SportsScores";
@@ -24,6 +25,7 @@ export default function Home() {
 
       {/* Aviation section */}
       <AviationWeather />
+      <TafForecast />
       <div className="grid grid-cols-2 gap-4">
         <TfrAlerts />
         <WindsAloft />

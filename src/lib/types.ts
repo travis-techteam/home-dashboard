@@ -28,6 +28,26 @@ export interface WeatherData {
   location: string;
 }
 
+export interface TafPeriod {
+  timeFrom: string;
+  timeTo: string;
+  flightCategory: string;
+  wind: string;
+  visibility: string;
+  ceiling: string;
+  weather: string;
+  changeType: string;
+}
+
+export interface TafForecast {
+  airport: string;
+  rawTAF: string;
+  issueTime: string;
+  validFrom: string;
+  validTo: string;
+  periods: TafPeriod[];
+}
+
 export interface MetarData {
   raw: string;
   airport: string;

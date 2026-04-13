@@ -11,6 +11,8 @@ interface GameInfo {
   awayTeam: string;
   homeLogo: string;
   awayLogo: string;
+  homeRecord: string;
+  awayRecord: string;
   homeScore: string;
   awayScore: string;
   detail: string;
@@ -92,7 +94,11 @@ export function SportsScores() {
               {game.awayLogo && (
                 <img src={game.awayLogo} alt="" width={24} height={24} />
               )}
-              <span className="text-sm font-medium flex-1">{game.awayTeam}</span>
+              <span className="text-sm font-medium">{game.awayTeam}</span>
+              {game.awayRecord && (
+                <span className="text-xs text-muted">({game.awayRecord})</span>
+              )}
+              <span className="flex-1" />
               <span className="text-sm font-bold tabular-nums">
                 {game.status !== "STATUS_SCHEDULED" ? game.awayScore : ""}
               </span>
@@ -102,7 +108,11 @@ export function SportsScores() {
               {game.homeLogo && (
                 <img src={game.homeLogo} alt="" width={24} height={24} />
               )}
-              <span className="text-sm font-medium flex-1">{game.homeTeam}</span>
+              <span className="text-sm font-medium">{game.homeTeam}</span>
+              {game.homeRecord && (
+                <span className="text-xs text-muted">({game.homeRecord})</span>
+              )}
+              <span className="flex-1" />
               <span className="text-sm font-bold tabular-nums">
                 {game.status !== "STATUS_SCHEDULED" ? game.homeScore : ""}
               </span>

@@ -96,17 +96,6 @@ export function AviationWeather() {
         {metar.raw}
       </div>
 
-      {/* TAF */}
-      {metar.taf && (
-        <div className="mt-2">
-          <div className="text-muted text-xs font-semibold uppercase tracking-wider mb-1">
-            TAF
-          </div>
-          <div className="font-mono text-xs text-muted bg-black/30 rounded-lg p-3 break-all whitespace-pre-wrap">
-            {metar.taf}
-          </div>
-        </div>
-      )}
     </Card>
   );
 }

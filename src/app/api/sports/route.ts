@@ -9,6 +9,8 @@ interface GameInfo {
   awayTeam: string;
   homeLogo: string;
   awayLogo: string;
+  homeRecord: string;
+  awayRecord: string;
   homeScore: string;
   awayScore: string;
   detail: string;
@@ -90,6 +92,8 @@ export async function GET() {
             awayTeam: awayTeam.team?.abbreviation || "AWAY",
             homeLogo: homeTeam.team?.logo || "",
             awayLogo: awayTeam.team?.logo || "",
+            homeRecord: homeTeam.records?.[0]?.summary || "",
+            awayRecord: awayTeam.records?.[0]?.summary || "",
             homeScore: homeTeam.score || "0",
             awayScore: awayTeam.score || "0",
             detail,
