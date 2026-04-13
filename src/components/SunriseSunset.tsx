@@ -56,7 +56,7 @@ export function SunriseSunset() {
     <Card>
       <div className="flex justify-between items-center">
         <div className="text-center">
-          <div className="text-2xl">🌅</div>
+          <div className="text-2xl text-yellow-400">&#9788;</div>
           <div className="text-sm font-medium">{formatTime(sun.sunrise)}</div>
           <div className="text-xs text-muted">Sunrise</div>
         </div>
@@ -65,7 +65,7 @@ export function SunriseSunset() {
           <div className="text-sm font-medium">{formatDuration(sun.dayLength)}</div>
         </div>
         <div className="text-center">
-          <div className="text-2xl">🌇</div>
+          <div className="text-2xl text-orange-400">&#9790;</div>
           <div className="text-sm font-medium">{formatTime(sun.sunset)}</div>
           <div className="text-xs text-muted">Sunset</div>
         </div>

@@ -9,7 +9,6 @@ import { WindsAloft } from "@/components/WindsAloft";
 import { SportsScores } from "@/components/SportsScores";
 import { GarbageSchedule } from "@/components/GarbageSchedule";
 import { Calendar } from "@/components/Calendar";
-import { QuoteOfDay } from "@/components/QuoteOfDay";
 
 export default function Home() {
   return (
@@ -37,10 +36,7 @@ export default function Home() {
       <Calendar />
 
       {/* Bottom section */}
-      <div className="grid grid-cols-2 gap-4">
-        <GarbageSchedule />
-        <QuoteOfDay />
-      </div>
+      <GarbageSchedule />
     </main>
   );
 }
