@@ -32,12 +32,14 @@ export default function Home() {
 
       {/* Aviation section */}
       <AviationWeather />
-      <TafForecast />
 
-      {/* Sports + Garbage side by side */}
-      <div className="grid grid-cols-2 gap-4">
-        <SportsScores />
-        <GarbageSchedule />
+      {/* TAF (half width) + stacked Sports & Garbage on the right */}
+      <div className="grid grid-cols-2 gap-4 items-start">
+        <TafForecast />
+        <div className="flex flex-col gap-4">
+          <SportsScores />
+          <GarbageSchedule />
+        </div>
       </div>
 
       {/* Calendar */}
